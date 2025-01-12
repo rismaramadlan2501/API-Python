@@ -36,7 +36,7 @@ which python
 pip install --upgrade pip
 
 # Install Flask
-pip install flask
+pip install -r requirements.txt
 ```
 
 ## 5. Verifikasi Instalasi
@@ -44,6 +44,8 @@ pip install flask
 ```bash
 # Cek versi Flask
 python -c "import flask; print(flask.__version__)"
+
+pip list
 ```
 
 ## 6. Membuat File Test
@@ -70,7 +72,8 @@ if __name__ == "__main__":
 ## 7. Menjalankan Aplikasi
 
 ```bash
-python test.py
+python test.py #untuk tes
+python run.py #untuk running API
 ```
 
 ## Perintah Tambahan

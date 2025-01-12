@@ -15,11 +15,11 @@ def verify_password(username, password):
     if username in users and users[username].check_password(password):
         return username
 
-@auth_bp.route('/public')
+@auth_bp.route('/public', methods=['GET'])
 def public():
     return jsonify({"message": "Ini adalah endpoint publik"})
 
-@auth_bp.route('/private')
+@auth_bp.route('/private', methods=['GET'])
 @auth.login_required
 def private():
     return jsonify({
